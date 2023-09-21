@@ -4,13 +4,15 @@ import {useFormikContext} from 'formik';
 import {LoginFormModel} from '../../../../containers/LoginPage/types';
 import styles from './styles';
 
-export const LoginTemplate = memo(() => {
+const LoginTemplate = memo(() => {
   const {handleSubmit, values, handleChange, handleBlur, isValid, errors} =
     useFormikContext<LoginFormModel>();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.logoText}> Login Page</Text>
+      <Text style={styles.logoText}>Login Page</Text>
+
+      {/* Email Input */}
       <TextInput
         style={styles.input}
         onChangeText={handleChange('email')}
@@ -18,7 +20,9 @@ export const LoginTemplate = memo(() => {
         onBlur={handleBlur('email')}
         placeholder="Enter Email"
       />
-      {errors?.email ? <Text style={styles.error}>{errors.email}</Text> : null}
+      {!!errors.email && <Text style={styles.error}>{errors.email}</Text>}
+
+      {/* Password Input */}
       <TextInput
         style={styles.input}
         onChangeText={handleChange('password')}
@@ -27,12 +31,9 @@ export const LoginTemplate = memo(() => {
         placeholder="Enter Password"
         keyboardType="numeric"
       />
-      {errors?.password ? (
-        <Text style={styles.error}>{errors.password}</Text>
-      ) : null}
+      {!!errors.password && <Text style={styles.error}>{errors.password}</Text>}
 
-      <Button type="press">Login</Button>
-
+      {/* Login Button */}
       <TouchableOpacity
         disabled={!isValid}
         style={styles.button}
@@ -42,3 +43,5 @@ export const LoginTemplate = memo(() => {
     </View>
   );
 });
+
+export default LoginTemplate;

@@ -7,17 +7,25 @@ import {signInPasswordFailure, signInPasswordRequest} from '../../actions/auth';
 
 export function* signInWithPasswordSaga({
   payload,
-}: ReturnType<typeof signInPasswordRequest>) {
+}: ReturnType<typeof signInPasswordRequest>): Generator<any, void, any> {
   try {
-    const networkService: ReturnType<typeof injectAppNetworkService> =
-      yield call(injectAppNetworkService);
-    const deviceId: string = yield call([DeviceInfo, DeviceInfo.getDeviceId]);
+    // Inject the network service
+    const networkService = yield call(injectAppNetworkService);
+
+    // Get the device ID
+    const deviceId = yield call([DeviceInfo, DeviceInfo.getDeviceId]);
     payload.deviceId = deviceId;
-    const signInPassResponse: any = yield call([
+
+    // Call the signInWithPassword method
+    const signInPassResponse = yield call([
       networkService,
       networkService.signInWithPassword,
     ]);
+    yield put(signInPassResponse);
+
+    // Handle success if needed
   } catch (error) {
+    // Handle the error and dispatch an action
     yield put(signInPasswordFailure(error as AxiosError));
   }
 }
