@@ -5,6 +5,7 @@ import {LoginFormModel} from '../../../../containers/LoginPage/types';
 import styles from './styles';
 
 const LoginTemplate = memo(() => {
+  console.log('kjskjcjkw');
   const {handleSubmit, values, handleChange, handleBlur, isValid, errors} =
     useFormikContext<LoginFormModel>();
 
