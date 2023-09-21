@@ -31,6 +31,8 @@ export const LoginTemplate = memo(() => {
         <Text style={styles.error}>{errors.password}</Text>
       ) : null}
 
+      <Button type="press">Login</Button>
+
       <TouchableOpacity
         disabled={!isValid}
         style={styles.button}
