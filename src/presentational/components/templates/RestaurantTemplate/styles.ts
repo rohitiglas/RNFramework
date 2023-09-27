@@ -9,6 +9,12 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
   },
+  imageStyle: {
+    width: 200,
+    height: 200,
+    borderRadius: 20,
+  },
+  itemContainer: {margin: 5, width: 220},
   button: {
     margin: 20,
     borderRadius: 20,

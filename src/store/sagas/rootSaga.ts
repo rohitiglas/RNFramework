@@ -1,9 +1,7 @@
 import {takeLatest} from 'redux-saga/effects';
-import {sagas} from './index';
-import {signInPasswordRequest} from '../actions/auth';
+import {FETCH_DATA_REQUEST} from '../actions/swiggyAction';
+import {fetchDataSaga} from './swiggySaga';
 
-const {signInWithPasswordSaga} = sagas;
-
-export function* auraAppRootSaga() {
-  yield takeLatest(signInPasswordRequest.type, signInWithPasswordSaga);
+export function* appRootSaga() {
+  yield takeLatest(FETCH_DATA_REQUEST, fetchDataSaga);
 }

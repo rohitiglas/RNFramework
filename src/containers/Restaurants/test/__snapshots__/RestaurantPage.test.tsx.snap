@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RestaurantPage renders RestaurantTemplate with provided data 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+      "marginTop": 0,
+    }
+  }
+>
+  <RCTScrollView
+    data={
+      [
+        {
+          "analytics": {
+            "context": "seo-data-a03d3313-a353-4ff2-9809-711f4721d02d",
+          },
+          "cta": {
+            "link": "https://www.swiggy.com/restaurants/om-bikaner-sweets-and-snacks-sinda-chowk-sector-12-a-gurgaon-565266",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK",
+          },
+          "info": {
+            "aggregatedDiscountInfoV3": {
+              "header": "10% OFF",
+              "subHeader": "UPTO ₹40",
+            },
+            "areaName": "Sector 12 A",
+            "availability": {
+              "nextCloseTime": "2023-09-27 21:16:00",
+              "opened": true,
+            },
+            "avgRating": 3.4,
+            "avgRatingString": "3.4",
+            "badges": {},
+            "badgesV2": {
+              "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {},
+              },
+            },
+            "cloudinaryImageId": "eu55r6igxo77ahgumivy",
+            "costForTwo": "₹200 for two",
+            "cuisines": [
+              "Snacks",
+              "Chinese",
+              "South Indian",
+            ],
+            "differentiatedUi": {
+              "differentiatedUiMediaDetails": {
+                "lottie": {},
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "video": {},
+              },
+              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "feeDetails": {
+              "fees": [
+                {
+                  "fee": 3800,
+                  "name": "BASE_DISTANCE",
+                },
+                {
+                  "name": "BASE_TIME",
+                },
+                {
+                  "name": "ANCILLARY_SURGE_FEE",
+                },
+              ],
+              "restaurantId": "565266",
+              "totalFee": 3800,
+            },
+            "id": "565266",
+            "isOpen": true,
+            "locality": "Sinda Chowk",
+            "name": "Om Bikaner Sweets & Snacks",
+            "orderabilityCommunication": {
+              "customIcon": {},
+              "message": {},
+              "subTitle": {},
+              "title": {},
+            },
+            "parentId": "151508",
+            "restaurantOfferPresentationInfo": {},
+            "reviewsSummary": {},
+            "sla": {
+              "deliveryTime": 20,
+              "iconType": "ICON_TYPE_EMPTY",
+              "lastMileTravel": 2.3,
+              "lastMileTravelString": "2.3 km",
+              "serviceability": "SERVICEABLE",
+              "slaString": "20 mins",
+            },
+            "totalRatingsString": "100+",
+            "type": "F",
+            "veg": true,
+          },
+          "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "margin": 5,
+                "width": 220,
+              }
+            }
+            testID="restaurant-item"
+          >
+            <Image
+              source={
+                {
+                  "uri": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/eu55r6igxo77ahgumivy",
+                }
+              }
+              style={
+                {
+                  "borderRadius": 20,
+                  "height": 200,
+                  "width": 200,
+                }
+              }
+            />
+            <Text
+              numberOfLines={1}
+              style={
+                {
+                  "color": "rgba(2, 6, 12, 0.75)",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "flexWrap": "wrap",
+                  "fontFamily": "Basis Grotesque Pro",
+                  "fontSize": 18,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.3,
+                  "lineHeight": 24,
+                  "margin": 0,
+                  "overflow": "hidden",
+                  "width": "100%",
+                }
+              }
+            >
+              Om Bikaner Sweets & Snacks
+            </Text>
+            <Text>
+              * 
+              3.4
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "rgba(2, 6, 12, 0.6)",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "flexWrap": "wrap",
+                  "fontFamily": "Basis Grotesque Pro",
+                  "fontSize": 16,
+                  "fontWeight": "200",
+                  "letterSpacing": -0.3,
+                  "lineHeight": 19,
+                  "overflow": "hidden",
+                  "width": "100%",
+                }
+              }
+            >
+              Snacks , Chinese , South Indian
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
